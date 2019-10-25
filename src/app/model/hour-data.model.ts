@@ -1,0 +1,22 @@
+export class HourData {
+    ICON: string;
+    CONDITION: string;
+    CONDITION_KEY: string;
+    TMP2m: string;
+    DPT2m: string;
+    WNDCHILL2m: string;
+    HUMIDEX: string;
+    RH2m: string;
+    PRMSL: string;
+    APCPsfc: string;
+    WNDSPD10m: string;
+    WNDGUST10m: string;
+    WNDDIR10m: string;
+    WNDDIRCARD10: string;
+    ISSNOW: string;
+    HCDC: string;
+    HGT0C: string;
+    KINDEX: string;
+    CAPE180_0: string;
+    CIN180_0: string;
+};
