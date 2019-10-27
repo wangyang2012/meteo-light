@@ -10,5 +10,6 @@ export class DateData {
     condition_key: string;
     icon: string;
     icon_big: string;
-    hourly_data: Hours;
-};
+    // hourly_data: Hours;
+    hourly_data: any;
+}

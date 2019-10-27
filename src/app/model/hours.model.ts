@@ -25,4 +25,4 @@ export class Hours {
     '21H00': HourData;
     '22H00': HourData;
     '23H00': HourData;
-};
+}
