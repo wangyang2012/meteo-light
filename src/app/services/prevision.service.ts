@@ -13,4 +13,9 @@ export class PrevisionService {
         const url = `${environment.api_backend_hostname}` + '/' + city;
         return this.http.get(url);
     }
+
+    searchCity(city: string): Observable<any> {
+        const url = `${environment.api_search_url}` + city;
+        return this.http.get(url);
+    }
 }
