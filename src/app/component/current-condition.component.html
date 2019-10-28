@@ -1,8 +1,14 @@
-<h2>Condition actuelle</h2>
-{{currentCondition.date}} {{currentCondition.hour}}<br/>
-Vent: {{currentCondition.wnd_dir}} {{currentCondition.wnd_spd}} km/h<br/>
-puissance de vent: {{currentCondition.wnd_gust}}<br/>
-pression: {{currentCondition.pressure}}<br/>
-humidité: {{currentCondition.humidity}} %<br/>
-condition: {{currentCondition.condition}}<br/>
-<img src="{{currentCondition.icon_big}}"/>
+<mat-card>
+    <mat-card-header>
+        <h2>Condition actuelle</h2>
+    </mat-card-header>
+    <mat-card-content>
+        {{currentCondition.date}} {{currentCondition.hour}}<br/>
+        Vent: {{currentCondition.wnd_dir}} {{currentCondition.wnd_spd}} km/h<br/>
+        puissance de vent: {{currentCondition.wnd_gust}}<br/>
+        pression: {{currentCondition.pressure}}<br/>
+        humidité: {{currentCondition.humidity}} %<br/>
+        condition: {{currentCondition.condition}}<br/>
+        <img src="{{currentCondition.icon_big}}"/>
+    </mat-card-content>
+</mat-card>

@@ -3,8 +3,8 @@ export class CurrentCondition {
     hour: string;
     tmp: number;
     wnd_spd: number;
-    wdn_gust: number;
-    wdn_dir: string;
+    wnd_gust: number;
+    wnd_dir: string;
     pressure: number;
     humidity: number;
     condition: string;
