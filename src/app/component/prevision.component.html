@@ -1,15 +1,13 @@
 <h1>Prévision</h1>
 
-<h2>information ville</h2>
-nom: {{prevision.city_info.name}}<br/>
-pays: {{prevision.city_info.country}}<br/>
-latitude: {{prevision.city_info.latitude}}<br/>
-longitude: {{prevision.city_info.longitude}}<br/>
-elevation: {{prevision.city_info.elevation}}<br/>
-sunrise: {{prevision.city_info.sunrise}}<br/>
-sunset: {{prevision.city_info.sunset}}<br/>
+<h2>{{prevision?.city_info.name}} ({{prevision?.city_info.country}})</h2>
+latitude: {{prevision?.city_info.latitude}}<br/>
+longitude: {{prevision?.city_info.longitude}}<br/>
+elevation: {{prevision?.city_info.elevation}}<br/>
+sunrise: {{prevision?.city_info.sunrise}}<br/>
+sunset: {{prevision?.city_info.sunset}}<br/>
 
-<app-current-condition [currentCondition]="prevision.current_condition"></app-current-condition>
+<app-current-condition *ngIf="prevision != null" [currentCondition]="prevision?.current_condition"></app-current-condition>
 
 <table border="1">
   <tr>
@@ -20,10 +18,10 @@ sunset: {{prevision.city_info.sunset}}<br/>
     <th><h2>day 4</h2></th>
   </tr>
   <tr>
-    <td><app-day [day]="prevision.fcst_day_0"></app-day></td>
-    <td><app-day [day]="prevision.fcst_day_1"></app-day></td>
-    <td><app-day [day]="prevision.fcst_day_2"></app-day></td>
-    <td><app-day [day]="prevision.fcst_day_3"></app-day></td>
-    <td><app-day [day]="prevision.fcst_day_4"></app-day></td>
+    <td><app-day [day]="prevision?.fcst_day_0" *ngIf="prevision != null"></app-day></td>
+    <td><app-day [day]="prevision?.fcst_day_1" *ngIf="prevision != null"></app-day></td>
+    <td><app-day [day]="prevision?.fcst_day_2" *ngIf="prevision != null"></app-day></td>
+    <td><app-day [day]="prevision?.fcst_day_3" *ngIf="prevision != null"></app-day></td>
+    <td><app-day [day]="prevision?.fcst_day_4" *ngIf="prevision != null"></app-day></td>
   </tr>
 </table>

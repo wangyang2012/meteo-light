@@ -11,5 +11,6 @@ export class DateData {
     icon: string;
     icon_big: string;
     // hourly_data: Hours;
+    // hourly_data: any;
     hourly_data: any;
 }

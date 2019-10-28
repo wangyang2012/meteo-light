@@ -18,10 +18,6 @@ export class PrevisionComponent implements OnInit {
 
     this.previsionService.getPrevision('sucy-en-brie').subscribe(data => {
       this.prevision = data;
-      for (let [key, value] of this.prevision.fcst_day_0.hourly_data) {
-        console.log(key);
-      }
-
     });
   }
 }
