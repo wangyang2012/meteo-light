@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, ViewChild} from '@angular/core';
 import {PrevisionService} from '../services/prevision.service';
 import {Prevision} from '../model/prevision.model';
 import {FormControl} from '@angular/forms';
@@ -15,7 +15,8 @@ export class SearchCityComponent implements OnInit {
     city: string;
 
     myControl = new FormControl();
-    options: SearchCityResult[] = [];
+    options: string[] = ['One', 'Two', 'Three'];
+    // options: SearchCityResult[] = [];
 
     constructor(private previsionService: PrevisionService) {
     }

@@ -1,6 +1,6 @@
-
 <div class="general-information">
   <app-city-info *ngIf="prevision != null" [city]="prevision.city_info"></app-city-info>
+  <app-search-city></app-search-city>
   <app-current-condition *ngIf="prevision != null" [currentCondition]="prevision.current_condition"></app-current-condition>
 </div>
 

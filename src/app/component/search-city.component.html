@@ -1,6 +1,6 @@
-<form>
+<form [formGroup]="myForm">
   <mat-form-field>
-    <input #searching-text type="text" placeholder="Recherche d'une localité (nom ou code postal)" (keyup.enter)="search(searching-text.value)" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <input #searchingText type="text" placeholder="Recherche d'une localité (nom ou code postal)" (keyup.enter)="search(searching-text.value)" matInput [formControl]="myControl" [matAutocomplete]="auto">
     <mat-autocomplete #auto="matAutocomplete">
       <mat-option *ngFor="let city of options" [value]="city.loc_url">
         {{city.label}}, {{city.region}}
@@ -8,3 +8,14 @@
     </mat-autocomplete>
   </mat-form-field>
 </form>
+
+<!--<form class="example-form" >-->
+  <!--<mat-form-field class="example-full-width">-->
+    <!--<input type="text" placeholder="Pick one" aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">-->
+    <!--<mat-autocomplete #auto="matAutocomplete">-->
+      <!--<mat-option *ngFor="let option of options" [value]="option">-->
+        <!--{{option}}-->
+      <!--</mat-option>-->
+    <!--</mat-autocomplete>-->
+  <!--</mat-form-field>-->
+<!--</form>-->
