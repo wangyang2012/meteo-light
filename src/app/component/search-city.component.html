@@ -1,13 +1,13 @@
-<form [formGroup]="myForm">
+<!--<form [formGroup]="myForm">-->
   <mat-form-field>
-    <input #searchingText type="text" placeholder="Recherche d'une localité (nom ou code postal)" (keyup.enter)="search(searching-text.value)" matInput [formControl]="myControl" [matAutocomplete]="auto">
+    <input #searchingText type="text" placeholder="Recherche d'une localité (nom ou code postal)" (keyup)="search(myControl.value)" (keyup.enter)="getPrevisionOfCity(myControl.value)" matInput [formControl]="myControl" [matAutocomplete]="auto">
     <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let city of options" [value]="city.loc_url">
+      <mat-option *ngFor="let city of options" [value]="city.loc_url" (click)="search(city.loc_url)">
         {{city.label}}, {{city.region}}
       </mat-option>
     </mat-autocomplete>
   </mat-form-field>
-</form>
+<!--</form>-->
 
 <!--<form class="example-form" >-->
   <!--<mat-form-field class="example-full-width">-->

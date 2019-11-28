@@ -6,4 +6,4 @@ export class City {
     elevation: number;
     sunrise: string;
     sunset: string;
-};
+}

@@ -1,8 +1,7 @@
-import {Component, Input, OnInit, ViewChild} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {PrevisionService} from '../services/prevision.service';
-import {Prevision} from '../model/prevision.model';
 import {FormControl} from '@angular/forms';
-import {SearchCityResult} from '../model/search-city-result.model';
+import {CityListItem} from '../model/city-list-item.model';
 
 @Component({
     selector: 'app-search-city',
@@ -15,7 +14,7 @@ export class SearchCityComponent implements OnInit {
     city: string;
 
     myControl = new FormControl();
-    options: string[] = ['One', 'Two', 'Three'];
+    options: CityListItem[] = [];
     // options: SearchCityResult[] = [];
 
     constructor(private previsionService: PrevisionService) {
@@ -25,9 +24,16 @@ export class SearchCityComponent implements OnInit {
   }
 
   search(searching: string) {
-        console.log("TODO: " + JSON.stringify(this.myControl));
-      this.previsionService.searchCity(searching).subscribe(data => {
-          this.options = data;
-      });
+        console.log("searching: " + searching);
+        if (searching.length >= 3) {
+            this.previsionService.searchCity(searching).subscribe(data => {
+                console.log("trouve!");
+                this.options = data;
+            });
+        }
+  }
+
+  getPrevisionOfCity(city: string) {
+      console.log("TODO: change city");
   }
 }
